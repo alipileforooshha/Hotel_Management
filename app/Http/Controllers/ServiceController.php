@@ -15,4 +15,7 @@ class ServiceController extends Controller
     public function cafe_order(){
         return view('cafe_order');
     }
+    public function pool(){
+        return view('pool');
+    }
 }
