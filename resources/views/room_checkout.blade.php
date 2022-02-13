@@ -1,6 +1,7 @@
 @include('layout')
-<div class="section">
+<div class="section d-flex justify-content-between">
     <form action="">
+        @include('search_guest')
         <div class="d-flex flex-column">
             <label for="">اطلاعات اتاق</label>
             <hr>
