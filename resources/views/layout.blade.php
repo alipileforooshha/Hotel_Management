@@ -16,6 +16,9 @@
         <a href="/Room_checkout" class="text-white sidebar-item">تسویه اتاق</a>
         <a href="/Hall_checkout" class="text-white sidebar-item">تسویه تالار</a>
         <a href="/Special_card" class="text-white sidebar-item">کارت ویژه</a>
+        <a href="/Child_care" class="text-white sidebar-item">تحویل کودک</a>
+        <a href="/Cafe_order" class="text-white sidebar-item">ثبت سفارش</a>
+        <a href="/Child_care" class="text-white sidebar-item">خدمات استخر</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

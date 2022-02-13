@@ -20,3 +20,6 @@ Route::get('/Halls',[HallController::class,'index']);
 Route::get('/Room_checkout',[RoomController::class,'checkout']);
 Route::get('/Hall_checkout',[HallController::class,'checkout']);
 Route::get('/Special_card',[ServiceController::class,'special_card']);
+Route::get('/Child_care',[ServiceController::class,'child_care']);
+Route::get('/Cafe_order',[ServiceController::class,'cafe_order']);
+Route::get('/pool',[ServiceController::class,'pool']);
