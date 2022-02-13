@@ -17,3 +17,4 @@ use App\Http\Controllers\RoomController;
 Route::get('/',[RoomController::class,'index']);
 Route::get('/Halls',[HallController::class,'index']);
 Route::get('/Room_checkout',[RoomController::class,'checkout']);
+Route::get('/Hall_checkout',[HallController::class,'checkout']);

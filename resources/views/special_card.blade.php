@@ -2,18 +2,18 @@
 <div class="section">
     <form action="">
         <div class="d-flex flex-column">
-            <label for="">اطلاعات اتاق</label>
+            <label for="">اطلاعات تالار</label>
             <hr>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">شماره اتاق</label>
+                <label class="form-label" for="">شماره کارت ویژه</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">طبقه اتاق</label>
+                <label class="form-label" for="">ظرفیت تالار</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">ظرفیت اتاق</label>
+                <label class="form-label" for="">پذیرایی مد نظر</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
@@ -32,24 +32,9 @@
                 <label class="form-label" for="">هزینه کل</label>
                 <input class="form-control" type="text" name="" id="" disabled>
             </div>
-            <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">امکانات ویژه</label>
-                <div class="form-check">
-                    <label class="form-check-label">ویو ابدی</label>
-                    <input class="form-check-input" type="checkbox" name="" id="">  
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">آیتم اول</label>
-                    <input class="form-check-input" type="checkbox" name="" id="">  
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">آیتم اول</label>
-                    <input class="form-check-input" type="checkbox" name="" id="">  
-                </div>
-            </div>
             <div class="d-flex justify-content-between">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    جستجوی اتاق ها
+                    جستجوی تالار ها
                 </button>
                 <!-- Button to Open the Modal -->
                 <button type="button" class="btn btn-success">
