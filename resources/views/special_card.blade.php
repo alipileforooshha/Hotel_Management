@@ -2,114 +2,152 @@
 <div class="section">
     <form action="">
         <div class="d-flex flex-column">
-            <label for="">اطلاعات تالار</label>
+            <label for="">خدمات کارت ویژه</label>
             <hr>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">شماره کارت ویژه</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">ظرفیت تالار</label>
+                <label class="form-label" for="">موجودی کارت ویژه</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">پذیرایی مد نظر</label>
+                <label class="form-label" for="">تاریخ صدور کارت ویژه</label>
                 <input class="form-control" type="text" name="" id="">
             </div>
             <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">تاریخ شروع اقامت</label>
+                <label class="form-label" for="">تاریخ انقضا کارت ویژه</label>
                 <input class="form-control" type="text" name="" id="">
-            </div>
-            <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">تاریخ پایان اقامت</label>
-                <input class="form-control" type="text" name="" id="">
-            </div>
-            <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">هزینه اقامت(هر شب)</label>
-                <input class="form-control" type="text" name="" id="" disabled>
-            </div>
-            <div class="d-flex flex-column my-2">
-                <label class="form-label" for="">هزینه کل</label>
-                <input class="form-control" type="text" name="" id="" disabled>
             </div>
             <div class="d-flex justify-content-between">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    جستجوی تالار ها
+                    شارژ کارت ویژه
                 </button>
                 <!-- Button to Open the Modal -->
-                <button type="button" class="btn btn-success">
-                    تسویه
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal1">
+                    تمدید کارت ویژه
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal2">
+                    کسر مبلغ کارت ویژه
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal3">
+                    تسویه کارت ویژه
                 </button>
             </div>
         </div>
         <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form action="">
+                      <div>
+                          <label class="form-label" for="">مبلغ شارژ</label>
+                          <input type="number" class="form-control" name="charged_value" id="" placeholder="200,000 toman">
+                      </div>
+                      <button class="btn btn-success mt-2">شارژ</button>
+                  </form>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                    <th>شماره اتاق</th>
-                    <th>ظرفیت اتاق</th>
-                    <th>امکانات ویژه</th>
-                    <th>هزینه اقامت هر شب</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="">
-                    <td>1</td>
-                    <td>4</td>
-                    <td>ویو ابدی</td>
-                    <td>100,000</td>
-                    <td>
-                        <button class="btn btn-success">
-                            انتخاب
-                        </button>
-                    </td>
-                    </tr>
-                    <tr class="">
-                    <td>2</td>
-                    <td>3</td>
-                    <td>-</td>
-                    <td>70,000</td>
-                    <td>
-                        <button class="btn btn-success">
-                            انتخاب
-                        </button>
-                    </td>
-                    </tr>
-                    <tr class="">
-                    <td>3</td>
-                    <td>2</td>
-                    <td>ویو ابدی - حمام ویژه</td>
-                    <td>150,000</td>
-                    <td>
-                        <button class="btn btn-success">
-                            انتخاب
-                        </button>
-                    </td>
-                    </tr>
-                </tbody>
-                </table>
+        <div class="modal" id="myModal1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form action="">
+                      <div>
+                          <label class="form-label" for="">مبلغ شارژ</label>
+                          <input type="number" class="form-control" name="charged_value" id="" placeholder="3 Days">
+                      </div>
+                      <button class="btn btn-success mt-2">شارژ</button>
+                  </form>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
         </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-    </form>
-  
+        <div class="modal" id="myModal2">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <label class="form-label" for="">مبلغ کسر</label>
+                            <input type="number" class="form-control" name="charged_value" id="" placeholder="3 Days">
+                        </div>
+                        <button class="btn btn-success mt-2">کسر مبلغ</button>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+    
+    
+    
+
+
+
+
+
+
+
+
+        </form>
+        <div class="modal" id="myModal3">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">تسویه کارت ویژه</h4>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <label class="form-label" for="">مبلغ کل</label>
+                            <input type="number" class="form-control" name="charged_value" id="" placeholder="300,000 toman">
+                        </div>
+                        <button class="btn btn-success mt-2">تسویه</button>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
   
 </div>
