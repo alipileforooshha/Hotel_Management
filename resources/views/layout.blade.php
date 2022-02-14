@@ -12,6 +12,7 @@
     <div class="sidebar d-flex flex-column">
         <img src="./images.png" class="sidebar-img" alt="">
         <a href="/" class="text-white sidebar-item">پذیرش مهمان</a>
+        <a href="/Room_renewal" class="text-white sidebar-item">تمدید اتاق</a>
         <a href="/Halls" class="text-white sidebar-item">پذیرش تالار</a>
         <a href="/Room_checkout" class="text-white sidebar-item">تسویه اتاق</a>
         <a href="/Hall_checkout" class="text-white sidebar-item">تسویه تالار</a>

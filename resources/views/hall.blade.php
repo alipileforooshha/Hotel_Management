@@ -62,8 +62,14 @@
                     <input class="form-control" type="text" name="" id="" disabled placeholder="200,000 تومان">
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <button type="button" class="btn btn-success mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
                         نمایش تالار های مجود
+                    </button>
+                    <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
+                        ثبت رزرو
+                    </button>
+                    <button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
+                        لغو رزرو
                     </button>
                 </div>
             </div>

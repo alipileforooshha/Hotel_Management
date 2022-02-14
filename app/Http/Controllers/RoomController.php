@@ -12,4 +12,7 @@ class RoomController extends Controller
     public function checkout(){
         return view('room_checkout');
     }
+    public function renewal(){
+        return view('Room_renewal');
+    }
 }
