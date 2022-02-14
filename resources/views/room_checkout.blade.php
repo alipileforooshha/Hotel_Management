@@ -7,31 +7,31 @@
             <hr>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">شماره اتاق</label>
-                <input class="form-control" type="text" name="" id="">
+                <input class="form-control" type="text" name="" id="" placeholder="1">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">طبقه اتاق</label>
-                <input class="form-control" type="text" name="" id="">
+                <input class="form-control" type="text" name="" id="" placeholder="طبقه 4">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">ظرفیت اتاق</label>
-                <input class="form-control" type="text" name="" id="">
+                <input class="form-control" type="text" name="" id="" placeholder="2">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">تاریخ شروع اقامت</label>
-                <input class="form-control" type="text" name="" id="">
+                <input class="form-control" type="text" name="" id="" placeholder="1400-2-4">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">تاریخ پایان اقامت</label>
-                <input class="form-control" type="text" name="" id="">
+                <input class="form-control" type="text" name="" id="" placeholder="1400-2-9">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">هزینه اقامت(هر شب)</label>
-                <input class="form-control" type="text" name="" id="" disabled>
+                <input class="form-control" type="text" name="" id="" disabled placeholder="200,000 تومان">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">هزینه کل</label>
-                <input class="form-control" type="text" name="" id="" disabled>
+                <input class="form-control" type="text" name="" id="" disabled placeholder="1,000,000 تومان">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">امکانات ویژه</label>
@@ -65,7 +65,7 @@
   
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">لیست اتاق ها</h4>
         </div>
   
         <!-- Modal body -->
@@ -82,9 +82,9 @@
                 <tbody>
                     <tr class="">
                     <td>1</td>
-                    <td>4</td>
+                    <td>4 نفر</td>
                     <td>ویو ابدی</td>
-                    <td>100,000</td>
+                    <td>100,000 تومان</td>
                     <td>
                         <button class="btn btn-success">
                             انتخاب
@@ -93,9 +93,9 @@
                     </tr>
                     <tr class="">
                     <td>2</td>
-                    <td>3</td>
+                    <td>3 نفر</td>
                     <td>-</td>
-                    <td>70,000</td>
+                    <td>70,000 تومان</td>
                     <td>
                         <button class="btn btn-success">
                             انتخاب
@@ -104,9 +104,9 @@
                     </tr>
                     <tr class="">
                     <td>3</td>
-                    <td>2</td>
+                    <td>2 نفر</td>
                     <td>ویو ابدی - حمام ویژه</td>
-                    <td>150,000</td>
+                    <td>150,000 تومان</td>
                     <td>
                         <button class="btn btn-success">
                             انتخاب
@@ -119,7 +119,7 @@
   
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">بستن</button>
         </div>
   
       </div>

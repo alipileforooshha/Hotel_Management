@@ -1,5 +1,5 @@
 @include('layout')
-<div class="section d-flex justify-content-between">
+<div class="section d-flex justify-content-between align-items-between">
     @include('search_guest')
     <form action="">
         <div class="d-flex flex-column">
@@ -112,43 +112,30 @@
           
               </div>
             </div>
-          </div>
-    
-    
-    
-
-
-
-
-
-
-
-
-        </form>
+        </div>
         <div class="modal" id="myModal3">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title">تسویه کارت ویژه</h4>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <label class="form-label" for="">مبلغ کل</label>
-                            <input type="number" class="form-control" name="charged_value" id="" placeholder="300,000 toman">
-                        </div>
-                        <button class="btn btn-success mt-2">تسویه</button>
-                    </form>
-                </div>
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-          
+          <div class="modal-dialog">
+            <div class="modal-content">
+                  <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">تسویه کارت ویژه</h4>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <form action="">
+                      <div>
+                          <label class="form-label" for="">مبلغ کل</label>
+                          <input type="number" class="form-control" name="charged_value" id="" placeholder="300,000 toman">
+                      </div>
+                      <button class="btn btn-success mt-2">تسویه</button>
+                  </form>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-  
+        </div>
+    </form>
 </div>
