@@ -33,53 +33,54 @@
                 <button class="btn btn-primary mt-3" type="submit">ثبت اطلاعات</button>
             </div>
         </form>
-            <form class="d-flex flex-column">
+            <form class="d-flex flex-column" action="/room_search_submit" method="POST">
+                @csrf
                 <label for="">اطلاعات اتاق</label>
                 <hr>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">طبقه اتاق</label>
-                    <input class="form-control" type="text" name="" id="" placeholder="3">
+                    <input class="form-control" type="text" name="floor" id="" placeholder="3">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">ظرفیت اتاق</label>
-                    <input class="form-control" type="text" name="" id="" placeholder="4">
+                    <input class="form-control" type="text" name="capacity" id="" placeholder="4">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">تاریخ شروع اقامت</label>
-                    <input class="form-control" type="datetime" name="" id="" placeholder="1378-3-3">
+                    <input class="form-control" type="datetime" name="startDate" id="" placeholder="1378-3-3">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">تاریخ پایان اقامت</label>
-                    <input class="form-control" type="datetime" name="" id="" placeholder="1378-3-7">
+                    <input class="form-control" type="datetime" name="endDate" id="" placeholder="1378-3-7">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">هزینه اقامت(هر شب)</label>
-                    <input class="form-control" type="text" name="" id="" disabled placeholder="100,000 تومان(حداکثر)">
+                    <input class="form-control" type="text" name="cost" id="" placeholder="100,000 تومان(حداکثر)">
                 </div>
                 <div class="d-flex flex-column my-2">
                     <label class="form-label" for="">امکانات ویژه</label>
                     <div class="form-check">
                         <label class="form-check-label">ویو ابدی</label>
-                        <input class="form-check-input" type="checkbox" name="" id="">  
+                        <input class="form-check-input" type="checkbox" name="view" id="">  
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">کارت ویژه</label>
-                        <input class="form-check-input" type="checkbox" name="" id="">  
+                        <input class="form-check-input" type="checkbox" name="specialCard" id="">  
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label">آیتم اول</label>
-                        <input class="form-check-input" type="checkbox" name="" id="">  
+                        <label class="form-check-label">پذیرایی در اتاق</label>
+                        <input class="form-check-input" type="checkbox" name="meal" id="">  
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label">آیتم اول</label>
-                        <input class="form-check-input" type="checkbox" name="" id="">  
+                        <label class="form-check-label">حمام ویژه</label>
+                        <input class="form-check-input" type="checkbox" name="bath" id="">  
                     </div>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-success mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <button type="submit" name="action" value="search" class="btn btn-success mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
                         نمایش اتاق های موجود
                     </button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <button type="submit" name="action" value="reserve" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                         رزرو اتاق
                     </button>
                 </div>
@@ -87,59 +88,40 @@
         </div>
 </div>
 
-<div class="modal" id="myModal">
+@if(isset($rooms))
+<div class="mymodal" id="">
     <div class="modal-dialog">
         <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header d-flex justify-content-between">
-            <h4 class="modal-title">اتاق های موجود</h4>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                    <th>شماره اتاق</th>
-                    <th>طبقه</th>
-                    <th>ظرفیت</th>
-                    <th>امکانات ویژه</th>
-                    <th>امکانات ویژه</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="">
-                    <td>1</td>
-                    <td>3</td>
-                    <td>4 نفر</td>
-                    <td>ویو - حمام ویژه</td>
-                    <td>
-                        <button class="btn btn-primary">
-                            انتخاب
-                        </button>
-                    </td>
-                    </tr>
-                    <tr class="">
-                        <td>1</td>
-                        <td>3</td>
-                        <td>4 نفر</td>
-                        <td>ویو - حمام ویژه</td>
-                        <td>
-                            <button class="btn btn-primary">
-                                انتخاب
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="">
-                        <td>1</td>
-                        <td>3</td>
-                        <td>4 نفر</td>
-                        <td>ویو - حمام ویژه</td>
-                        <td>
-                            <button class="btn btn-primary">
-                                انتخاب
-                            </button>
-                        </td>
-                    </tr>
+            <!-- Modal Header -->
+            <div class="modal-header d-flex justify-content-between">
+                <h4 class="modal-title">اتاق های موجود</h4>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>شماره اتاق</th>
+                            <th>طبقه</th>
+                            <th>ظرفیت</th>
+                            <th>امکانات ویژه</th>
+                            <th>امکانات ویژه</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($rooms as $room)
+                        <tr class="">
+                            <td>{{$room->id}}</td>
+                            <td>{{$room->floor}}</td>
+                            <td>{{$room->capacity . 'نفر'}}</td>
+                            <td>{{$room->specialServices}}</td>
+                            <td>
+                                <button class="btn btn-primary">
+                                    انتخاب
+                                </button>
+                            </td>
+                        </tr>
+                        @endforeach
                 </tbody>
                 </table>
         </div>
@@ -149,3 +131,5 @@
         </div>
     </div>
 </div>
+</div>
+@endif
