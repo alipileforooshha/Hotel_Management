@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HallController;
 use App\Http\Controllers\RoomController;
@@ -24,3 +25,4 @@ Route::get('/Special_card',[ServiceController::class,'special_card']);
 Route::get('/Child_care',[ServiceController::class,'child_care']);
 Route::get('/Cafe_order',[ServiceController::class,'cafe_order']);
 Route::get('/Pool',[ServiceController::class,'pool']);
+Route::post('/create_user',[GuestController::class,'create']);
