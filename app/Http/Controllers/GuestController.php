@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Session;
 class GuestController extends Controller
 {
     public function create(Request $req){
+        $validated = $req->validate([
+            'fullname' => 'required',
+            'ssn' => 'required',
+            'number' => 'required'
+        ]);
         if($req->gender == 'مرد'){
             $req->gender = 1;
         }elseif($req->gender == 'زن'){
@@ -28,6 +33,6 @@ class GuestController extends Controller
         Session::put('gender',$guest->gender);
         Session::put('ssn',$guest->ssn);
         Session::put('number',$guest->phone);
-        return redirect('/');
+        return back();
     }
 }
