@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\guest;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session as FacadesSession;
+use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
 {
@@ -23,12 +22,12 @@ class GuestController extends Controller
             'ssn' => $req->ssn,
             'phone' => $req->number,
         ]);
-        FacadesSession::put('id',$guest->id);
-        FacadesSession::put('fullname',$guest->fullname);
-        FacadesSession::put('age',$guest->age);
-        FacadesSession::put('gender',$guest->gender);
-        FacadesSession::put('ssn',$guest->ssn);
-        FacadesSession::put('number',$guest->phone);
+        Session::put('id',$guest->id);
+        Session::put('fullname',$guest->fullname);
+        Session::put('age',$guest->age);
+        Session::put('gender',$guest->gender);
+        Session::put('ssn',$guest->ssn);
+        Session::put('number',$guest->phone);
         return redirect('/');
     }
 }

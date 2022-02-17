@@ -7,23 +7,23 @@
         <div class="d-flex justify-content-between flex-wrap">
             <div class="d-flex flex-column my-2">
                 <label class="form-label text-danger" for="">نام  و نام خانوادگی (الزامی)</label>
-                <input class="form-control" type="text" name="fullname" id="" placeholder="علی پیله فروشها">
+                <input class="form-control" type="text" name="fullname" id="" placeholder="علی پیله فروشها" value={{Session::get('fullname')}}>
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">سن</label>
-                <input class="form-control" type="text" name="age" id="" placeholder="35">
+                <input class="form-control" type="text" name="age" id="" placeholder="35" value={{Session::get('age')}}>
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">جنسیت</label>
-                <input class="form-control" type="text" name="gender" id="" placeholder="مرد - زن">
+                <input class="form-control" type="text" name="gender" id="" placeholder="مرد - زن" value={{Session::get('age')}}>
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label text-danger" for="">شماره ملی (الزامی)</label>
-                <input class="form-control" type="text" name="ssn" id="" placeholder="4313345821">
+                <input class="form-control" type="text" name="ssn" id="" placeholder="4313345821" value={{Session::get('ssn')}}>
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label text-danger" for="">شماره تماس (الزامی)</label>
-                <input class="form-control" type="text" name="number" id="" placeholder="09128221412">
+                <input class="form-control" type="text" name="number" id="" placeholder="09128221412" value={{Session::get('number')}}>
             </div>
         </div>
                 <button class="btn btn-primary mt-3" type="submit">ثبت اطلاعات</button>
@@ -142,7 +142,7 @@
 <div class="section">
     <label class="mt-4" for="">اطلاعات همراهان</label>
     <hr>
-    @for($i = 0; $i < $room->capacity; $i++)
+    @for($i = 1; $i < $room->capacity; $i++)
         <form action="/create_user" class="mx-3 mb-3" method="POST">
             @csrf
             <div class="d-flex justify-content-between flex-wrap">
