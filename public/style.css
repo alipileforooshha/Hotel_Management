@@ -24,7 +24,8 @@ a{
 }
 .section{
     padding: 50px;
-    margin: 300px;
+    margin: 250px;
+    margin-bottom: 50px;
     margin-top: 0;
 }
 .sidebar-item{

@@ -27,3 +27,4 @@ Route::get('/Cafe_order',[ServiceController::class,'cafe_order']);
 Route::get('/Pool',[ServiceController::class,'pool']);
 Route::post('/create_user',[GuestController::class,'create']);
 Route::post('/room_search_submit',[RoomController::class,'search_submit']);
+Route::post('/room_select',[RoomController::class,'select']);

@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\guests;
-use App\Models\halls;
-use App\Models\rooms;
+use App\Models\room;
+use App\Models\guest;
 
 return new class extends Migration
 {
@@ -16,9 +15,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('guest_room', function (Blueprint $table) {
-            $table->foreignIdFor(guests::class);
-            $table->foreignIdFor(rooms::class);
+        Schema::create('guest_rooms', function (Blueprint $table) {
+            $table->foreignIdFor(guest::class);
+            $table->foreignIdFor(room::class);
             $table->date('reserve_start');
             $table->date('reserve_end');
             $table->id();
