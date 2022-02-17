@@ -46,11 +46,11 @@
         </div>
         <div class="d-flex flex-column my-2">
             <label class="form-label text-danger" for="">تاریخ شروع اقامت (الزامی)</label>
-            <input class="form-control" type="date" name="startDate" id="" placeholder="1378-3-3">
+            <input class="form-control" type="date" name="startDate" id="" placeholder="1378-3-3" value="@if(isset($room)){{Session('reserve_start')}}@endif">
         </div>
         <div class="d-flex flex-column my-2">
             <label class="form-label text-danger" for="">تاریخ پایان اقامت (الزامی)</label>
-            <input class="form-control" type="date" name="endDate" id="" placeholder="1378-3-7">
+            <input class="form-control" type="date" name="endDate" id="" placeholder="1378-3-7" value="@if(isset($room)){{Session('reserve_end')}}@endif">
         </div>
         <div class="d-flex flex-column my-2">
             <label class="form-label text-danger" for="">هزینه اقامت(هر شب) (الزامی)</label>
