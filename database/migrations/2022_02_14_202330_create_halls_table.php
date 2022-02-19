@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('halls', function (Blueprint $table) {
             $table->smallInteger('capacity');
+            $table->smallInteger('cost');
             $table->id();
             $table->timestamps();
         });

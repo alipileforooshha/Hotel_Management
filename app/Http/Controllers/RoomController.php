@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\guest;
 use Illuminate\Http\Request;
 use App\Models\room;
 use App\Models\guest_room;
@@ -15,9 +16,6 @@ class RoomController extends Controller
     }
     public function checkout(){
         return view('room_checkout');
-    }
-    public function renewal(){
-        return view('Room_renewal');
     }
     public function search_submit(Request $req){
         if($req->action == "search"){
@@ -95,6 +93,24 @@ class RoomController extends Controller
     }
     public function select(Request $req){
         $room = room::find($req->id);
-        return view('index',['room'=>$room]);
+        if($req->action == 'index'){
+            return view('index',['room'=>$room]);
+        }elseif($req->action == 'renewal'){
+            $guest = guest::where('ssn',$req->ssn)->first();
+            $reserve = guest_room::where('room_id',$req->id)->
+            where('guest_id',$guest->id)->first();
+            if($guest->reserve->count() != 0){
+                return view('Room_renewal',['room'=>$room,'reserve'=>$reserve,'guest'=>$guest]);
+            }else{
+                return view('Room_renewal');
+            }
+        }
+    }
+    public function renewal(Request $req){
+        $reserve = guest_room::where('guest_id',$req->guest_id)->
+        where('room_id',$req->id)->first();
+        $reserve->reserve_end = $req->reserve_end;
+        $reserve->save();
+        return view('Room_renewal');        
     }
 }

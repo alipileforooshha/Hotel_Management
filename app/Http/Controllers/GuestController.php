@@ -35,4 +35,5 @@ class GuestController extends Controller
         Session::put('number',$guest->phone);
         return back();
     }
+    
 }

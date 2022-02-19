@@ -15,7 +15,7 @@
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label" for="">جنسیت</label>
-                <input class="form-control" type="text" name="gender" id="" placeholder="مرد - زن" value={{Session::get('age')}}>
+                <input class="form-control" type="text" name="gender" id="" placeholder="مرد - زن">
             </div>
             <div class="d-flex flex-column my-2">
                 <label class="form-label text-danger" for="">شماره ملی (الزامی)</label>
@@ -107,7 +107,7 @@
                     </thead>
                     <tbody>
                         @foreach($rooms as $room)
-                        <form action="room_select" method="POST">
+                        <form action="/room_select" method="POST">
                             @csrf
                         <tr class="">
                             <input type="text" name="id" id="" style="display: none" value={{$room->id}}>
@@ -119,7 +119,7 @@
                             <td>{{$room->specialServices}}</td>
                             <td>{{$room->price}}</td>
                             <td>
-                                <button class="btn btn-primary" type="submit">
+                                <button class="btn btn-primary" type="submit" name="action" value="index">
                                     انتخاب
                                 </button>
                             </td>

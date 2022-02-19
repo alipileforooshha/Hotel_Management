@@ -1,19 +1,21 @@
-<form action="">
-    <label for="">جستجوی مهمان</label>
-    <hr>
-    <div class="d-flex flex-column my-2">
-        <label class="form-label" for="">ایدی مهمان</label>
-        <input class="form-control" type="text" name="" id="" placeholder="3">
+<label for="">جستجوی مهمان</label>
+<hr>
+<form action="/guest_search" class="" method="POST">
+    <div class="d-flex justify-content-between flex-wrap">
+        <div class="d-flex flex-column my-2">
+            <label class="form-label" for="">ایدی مهمان</label>
+            <input class="form-control" type="text" name="" id="" placeholder="3">
+        </div>
+        <div class="d-flex flex-column my-2">
+            <label class="form-label" for="">نام و نام خانوادگی</label>
+            <input class="form-control" type="text" name="" id="" placeholder="علی پیله فروشها">
+        </div>
+        <div class="d-flex flex-column my-2">
+            <label class="form-label" for="">شماره ملی</label>
+            <input class="form-control" type="text" name="" id="" placeholder="4318391047">
+        </div>
     </div>
-    <div class="d-flex flex-column my-2">
-        <label class="form-label" for="">نام و نام خانوادگی</label>
-        <input class="form-control" type="text" name="" id="" placeholder="علی پیله فروشها">
-    </div>
-    <div class="d-flex flex-column my-2">
-        <label class="form-label" for="">شماره ملی</label>
-        <input class="form-control" type="text" name="" id="" placeholder="4318391047">
-    </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#search_guest">
+    <button type="button" class="btn btn-primary">
         جستجو
     </button>
 </form>
